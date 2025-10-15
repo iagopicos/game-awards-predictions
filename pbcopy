@@ -1,0 +1,177 @@
+.
+├── README.md
+├── eslint.config.js
+├── index.html
+├── node_modules
+│   ├── @babel
+│   ├── @esbuild
+│   ├── @eslint
+│   ├── @eslint-community
+│   ├── @floating-ui
+│   ├── @humanfs
+│   ├── @humanwhocodes
+│   ├── @jridgewell
+│   ├── @mantine
+│   ├── @nodelib
+│   ├── @rolldown
+│   ├── @rollup
+│   ├── @tabler
+│   ├── @types
+│   ├── @typescript-eslint
+│   ├── @vitejs
+│   ├── acorn
+│   ├── acorn-jsx
+│   ├── ajv
+│   ├── ansi-styles
+│   ├── argparse
+│   ├── babel-plugin-react-compiler
+│   ├── balanced-match
+│   ├── baseline-browser-mapping
+│   ├── brace-expansion
+│   ├── braces
+│   ├── browserslist
+│   ├── callsites
+│   ├── caniuse-lite
+│   ├── clsx
+│   ├── color-convert
+│   ├── color-name
+│   ├── concat-map
+│   ├── convert-source-map
+│   ├── cookie
+│   ├── cross-spawn
+│   ├── csstype
+│   ├── chalk
+│   ├── debug
+│   ├── deep-is
+│   ├── detect-node-es
+│   ├── electron-to-chromium
+│   ├── esbuild
+│   ├── escalade
+│   ├── escape-string-regexp
+│   ├── eslint
+│   ├── eslint-plugin-react-hooks
+│   ├── eslint-plugin-react-refresh
+│   ├── eslint-scope
+│   ├── eslint-visitor-keys
+│   ├── espree
+│   ├── esquery
+│   ├── esrecurse
+│   ├── estraverse
+│   ├── esutils
+│   ├── fast-deep-equal
+│   ├── fast-glob
+│   ├── fast-json-stable-stringify
+│   ├── fast-levenshtein
+│   ├── fastq
+│   ├── file-entry-cache
+│   ├── fill-range
+│   ├── find-up
+│   ├── flat-cache
+│   ├── flatted
+│   ├── fsevents
+│   ├── gensync
+│   ├── get-nonce
+│   ├── glob-parent
+│   ├── globals
+│   ├── graphemer
+│   ├── has-flag
+│   ├── ignore
+│   ├── import-fresh
+│   ├── imurmurhash
+│   ├── is-extglob
+│   ├── is-glob
+│   ├── is-number
+│   ├── isexe
+│   ├── js-tokens
+│   ├── js-yaml
+│   ├── jsesc
+│   ├── json-buffer
+│   ├── json-schema-traverse
+│   ├── json-stable-stringify-without-jsonify
+│   ├── json5
+│   ├── keyv
+│   ├── levn
+│   ├── locate-path
+│   ├── lodash.merge
+│   ├── lru-cache
+│   ├── merge2
+│   ├── micromatch
+│   ├── minimatch
+│   ├── ms
+│   ├── nanoid
+│   ├── natural-compare
+│   ├── node-releases
+│   ├── optionator
+│   ├── p-limit
+│   ├── p-locate
+│   ├── parent-module
+│   ├── path-exists
+│   ├── path-key
+│   ├── picocolors
+│   ├── picomatch
+│   ├── postcss
+│   ├── prelude-ls
+│   ├── punycode
+│   ├── queue-microtask
+│   ├── react
+│   ├── react-dom
+│   ├── react-number-format
+│   ├── react-refresh
+│   ├── react-remove-scroll
+│   ├── react-remove-scroll-bar
+│   ├── react-router
+│   ├── react-router-dom
+│   ├── react-style-singleton
+│   ├── react-textarea-autosize
+│   ├── resolve-from
+│   ├── reusify
+│   ├── rollup
+│   ├── run-parallel
+│   ├── scheduler
+│   ├── semver
+│   ├── set-cookie-parser
+│   ├── shebang-command
+│   ├── shebang-regex
+│   ├── source-map-js
+│   ├── strip-json-comments
+│   ├── supports-color
+│   ├── tabbable
+│   ├── tinyglobby
+│   ├── to-regex-range
+│   ├── ts-api-utils
+│   ├── tslib
+│   ├── type-check
+│   ├── type-fest
+│   ├── typescript
+│   ├── typescript-eslint
+│   ├── undici-types
+│   ├── update-browserslist-db
+│   ├── uri-js
+│   ├── use-callback-ref
+│   ├── use-composed-ref
+│   ├── use-isomorphic-layout-effect
+│   ├── use-latest
+│   ├── use-sidecar
+│   ├── vite
+│   ├── which
+│   ├── word-wrap
+│   ├── yallist
+│   └── yocto-queue
+├── package-lock.json
+├── package.json
+├── pbcopy
+├── public
+│   └── vite.svg
+├── src
+│   ├── App.css
+│   ├── App.tsx
+│   ├── assets
+│   ├── components
+│   ├── index.css
+│   └── main.tsx
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+160 directories, 15 files
