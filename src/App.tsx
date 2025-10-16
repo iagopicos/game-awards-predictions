@@ -4,6 +4,7 @@ import './App.css'
 import HomePage from './components/homepage/HomePage';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/header/Header';
+import { Login } from './components/login/Login';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path='/' element={<HomePage />} />
+                <Route path='/login' element={<Login />} />
             </Routes>
         </MantineProvider>
     )
