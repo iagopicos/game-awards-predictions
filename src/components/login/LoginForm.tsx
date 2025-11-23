@@ -4,8 +4,6 @@ import {
     Checkbox,
     Divider,
     Group,
-    Paper,
-    type PaperProps,
     PasswordInput,
     Stack,
     Text,
@@ -14,7 +12,7 @@ import {
 import { useForm } from '@mantine/form';
 import { upperFirst, useToggle } from '@mantine/hooks';
 
-export function LoginForm(props: PaperProps) {
+export function LoginForm() {
     const [type, toggle] = useToggle(['login', 'register']);
     const form = useForm({
         initialValues: {
@@ -31,16 +29,22 @@ export function LoginForm(props: PaperProps) {
     });
 
     return (
-        <Paper radius="md" p="lg" withBorder {...props}>
-            <Text size="lg" fw={500}>
-                Welcome to Mantine, {type} with
-            </Text>
+        <Stack gap="lg">
+            <Stack gap="xs">
+                <Text size="xl" fw={700} ta="center">
+                    {type === 'login' ? 'Welcome back!' : 'Create your account'}
+                </Text>
+                <Text size="sm" c="dimmed" ta="center">
+                    {type === 'login'
+                        ? 'Sign in to make your predictions for Game Awards 2025'
+                        : 'Join us to predict the winners of Game Awards 2025'}
+                </Text>
+            </Stack>
 
-
-            <Divider label="Or continue with email" labelPosition="center" my="lg" />
+            <Divider />
 
             <form onSubmit={form.onSubmit(() => { })}>
-                <Stack>
+                <Stack gap="md">
                     {type === 'register' && (
                         <TextInput
                             label="Name"
@@ -80,17 +84,19 @@ export function LoginForm(props: PaperProps) {
                     )}
                 </Stack>
 
-                <Group justify="space-between" mt="xl">
-                    <Anchor component="button" type="button" c="dimmed" onClick={() => toggle()} size="xs">
-                        {type === 'register'
-                            ? 'Already have an account? Login'
-                            : "Don't have an account? Register"}
+                <Button type="submit" fullWidth mt="xl" size="md" radius="md">
+                    {type === 'login' ? 'Sign in' : 'Create account'}
+                </Button>
+
+                <Text ta="center" size="sm" mt="md">
+                    <Text component="span" c="dimmed">
+                        {type === 'register' ? 'Already have an account? ' : "Don't have an account? "}
+                    </Text>
+                    <Anchor component="button" type="button" onClick={() => toggle()} size="sm" fw={500}>
+                        {type === 'register' ? 'Sign in' : 'Sign up'}
                     </Anchor>
-                    <Button type="submit" radius="xl">
-                        {upperFirst(type)}
-                    </Button>
-                </Group>
+                </Text>
             </form>
-        </Paper>
+        </Stack>
     );
 }

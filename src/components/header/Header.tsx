@@ -1,18 +1,20 @@
-import { Anchor, Burger, Container, Group } from '@mantine/core';
+import { Anchor, Burger, Container, Group, Button } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { Login } from '../login/Login';
 
 const links = [
-    { link: '/login', label: 'Login' },
     { link: '/pricing', label: 'Pricing' },
     { link: '/learn', label: 'Learn' },
     { link: '/community', label: 'Community' },
 ];
 
 export function Header() {
-    const [opened, { toggle }] = useDisclosure(false);
-    const navigate = useNavigate()
+    const [burgerOpened, { toggle }] = useDisclosure(false);
+    const [loginOpened, { open: openLogin, close: closeLogin }] = useDisclosure(false);
+    const navigate = useNavigate();
+
     const items = links.map((link) => (
         <Anchor
             key={link.label}
@@ -26,15 +28,24 @@ export function Header() {
     ));
 
     return (
-        <header className={classes.header}>
-            <Container size="md" className={classes.inner}>
-                <div>LOGO</div>
-                <Group gap={5} visibleFrom="xs">
-                    {items}
-                </Group>
+        <>
+            <header className={classes.header}>
+                <Container size="lg" className={classes.inner}>
+                    <div className={classes.logo} onClick={() => navigate('/')}>🎮 GAME AWARDS</div>
+                    <Group gap={8} visibleFrom="xs">
+                        {items}
+                        <Button
+                            variant="subtle"
+                            onClick={openLogin}
+                        >
+                            Login
+                        </Button>
+                    </Group>
 
-                <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-            </Container>
-        </header>
+                    <Burger opened={burgerOpened} onClick={toggle} hiddenFrom="xs" size="sm" />
+                </Container>
+            </header>
+            <Login opened={loginOpened} onClose={closeLogin} />
+        </>
     );
 }

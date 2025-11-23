@@ -1,9 +1,23 @@
-import { Container } from '@mantine/core';
+import { Modal } from '@mantine/core';
 import { LoginForm } from './LoginForm';
-export function Login() {
+
+interface LoginProps {
+    opened: boolean;
+    onClose: () => void;
+}
+
+export function Login({ opened, onClose }: LoginProps) {
     return (
-        <Container size={420} my={40}>
+        <Modal
+            opened={opened}
+            onClose={onClose}
+            size="md"
+            centered
+            padding="xl"
+            radius="md"
+            withCloseButton={true}
+        >
             <LoginForm />
-        </Container>
+        </Modal>
     );
 }
